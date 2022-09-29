@@ -1,0 +1,44 @@
+/*
+
+Professor,
+O código não está finalizado pois eu não consegui escrever uma ou mais funções que desempenhassem a ação de virar a 
+carta e, posteriormente de verificação quanto ao 'id' de cada uma das imagens. Fiz várias tentativas, mas infelizmente 
+não obtive sucesso em nenhuma delas.
+O pensamennto que tentei implementar foi o de uma função com 'TouchableOpacity' a qual cada espaço delimitado pelas 
+cartas, seria de uma cor de preenchimento somente, e quando fosse clicado revelaria a imagem do verso. Não saberia como
+desenvolver para manter a carta voltada para cima caso o par fosse encontrado, mas acredito que pelo identificador de
+cada imagem teria como  escrever algumas linhas de código para verificar a igualdade e com isso também haveria outra 
+função para mantê-las estáticas.
+Penso que a contagem de pontos, vitórias e derrotas não seriam tão complicadas de serem implementadas. Eu desenvolveria
+uma condicional de 'if' e 'else' para cada um desses tópicos e faria uma ligação de variáveis na condição envolvendo a 
+pontuação final do jogo e a identificação de vitória e/ou derrota. Funcionaria com base nos pontos maior ou igual a zero,
+e menor do que zero para tais especificações.
+
+
+Tentativa no código do arquivo 'FacilCard.js':
+
+function FacilCard({item}){
+
+    const itemClass = item.stat ? "active" + item.stat : ""
+
+    return(
+        <View style={styles.container} className={"card" + itemClass}>
+            <ImageBackground style={styles.img}>
+            <TouchableOpacity onPress={() => {{source: item.img}}}>
+                <Image style={styles.image} alt=""/>
+            </TouchableOpacity>    
+            </ImageBackground>
+        </View>
+    )
+}
+
+Tentativa no código do arquivo 'Facil.js':
+
+function VirarCarta({item}){
+    return(
+        <View style={styles.container}>
+            <Image onClick {() => (source: item.img)}/>
+        </View>
+    )
+}
+*/
